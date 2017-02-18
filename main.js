@@ -25,35 +25,26 @@ $(document).ready(function() {
       122, 120, 99, 118, 98, 110, 109]
     };
 
-  // Generates a random character from the koreanCharacter array
-  function GenRandKoreanChar() {
+  function NextKoreanCharRecur(currQuestionText) {
     var randChar = koreanKey.koreanCharacter[
       Math.floor(Math.random() * koreanKey.koreanCharacter.length)];
-    // console.log(randChar)
-    return randChar;
-  };
-
-  function NextKoreanChar() {
-    // alert("temporary-next-button-onclick");
-    // alert(koreanChar[2]);
-    var randChar = GenRandKoreanChar();
-    while ($("#question-text").text() == randChar) {
-      // console.log("repeated");
-      var randChar = GenRandKoreanChar();
+    if (currQuestionText === randChar) {
+      return NextKoreanCharRecur($("#question-text").text())
+    } else {
+      // console.log(randChar)
+      return(randChar)
     }
-    // console.log(randChar)
-    return(randChar)
   };
 
   function CheckAnswer(ans) {
     if (koreanKey.characterCode.indexOf(ans) >= 0) {
-      if ($("#question-text").text() == String.fromCharCode(ans + 12497)) {
+      if ($("#question-text").text() === String.fromCharCode(ans + 12497)) {
         var isRight = 1;
       } else {
         var isRight = 0;
       }
     }
-    console.log(isRight);
+    // console.log(isRight);
     return(isRight)
   };
 
@@ -76,36 +67,19 @@ $(document).ready(function() {
 
   $(document).on("keypress", function (e) {
     {
-      // console.log("#"+String.fromCharCode(e.which)+"-key")
-      // Prints letter for ease, revert to code later
-      // var charCode = e.which;
-      // $("#"+String.fromCharCode(charCode)+"-key").attr("class", "keys on");
       // Correct and incorrect answer responses
-      // var oldBG =  $("#question-area").css('background-color');
       if (CheckAnswer(e.which) === 1) {
         $("#question-area").stop(true, true).effect("highlight", {color: "#008800"})
-        $("#question-text").html(NextKoreanChar());
-        // $("#input-display").css("background", "green")
-        // $("#question-area").css('background-color', '#008800')
+        $("#question-text").html(NextKoreanCharRecur($("#question-text").text()));
       } else {
         $("#question-area").stop(true, true).effect("highlight", {color: "#CC0000"})
-        // $("#input-display").css("background", "red")
-        // $("#question-area").css('background-color', '#CC0000')
       }
-      // setTimeout(function() {
-      //   $("#question-area").css('background-color', oldBG);
-      // }, 1000);
-      // $("#question-area").toggle("highlight")
     }
   });
   $(document).on("keyup", function (e) {
-      console.log("#"+String.fromCharCode(e.which)+"-key")
-      console.log(e.which)
       $("#"+String.fromCharCode(e.which).toLowerCase()+"-key").attr("class", "keys off");
   });
 });
-
-
 
 
 var onkeydown = (function (ev) {
