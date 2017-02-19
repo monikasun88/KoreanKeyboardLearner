@@ -25,11 +25,11 @@ $(document).ready(function() {
       122, 120, 99, 118, 98, 110, 109]
     };
 
-  function NextKoreanCharRecur(currQuestionText) {
+  function NextKoreanChar(currQuestionText) {
     var randChar = koreanKey.koreanCharacter[
       Math.floor(Math.random() * koreanKey.koreanCharacter.length)];
     if (currQuestionText === randChar) {
-      return NextKoreanCharRecur($("#question-text").text())
+      return NextKoreanChar($("#question-text").text())
     } else {
       // console.log(randChar)
       return(randChar)
@@ -70,7 +70,7 @@ $(document).ready(function() {
       // Correct and incorrect answer responses
       if (CheckAnswer(e.which) === 1) {
         $("#question-area").stop(true, true).effect("highlight", {color: "#008800"})
-        $("#question-text").html(NextKoreanCharRecur($("#question-text").text()));
+        $("#question-text").html(NextKoreanChar($("#question-text").text()));
       } else {
         $("#question-area").stop(true, true).effect("highlight", {color: "#CC0000"})
       }
