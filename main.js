@@ -62,23 +62,38 @@ $(document).ready(function() {
     )
   });
 
-  // Open/close keyboard key on click study/click close or hit escape
-  $("#study").click(function() {
+  // Open/close keyboard key on click study/click close, hit escape or click outside
+  $(".button").click(function() {
     $("#popup1").attr("class", "overlayShow");
   });
   $(".close").click(function() {
     $("#popup1").attr("class", "overlay");
   });
+  $(".overlay").click(function(e) {
+    if ($(e.target).attr("class") === "overlayShow") {
+      $("#popup1").attr("class", "overlay");
+    }
+  });
+
+  // Next button goes to next letter
+  $("#next-button").click(function() {
+    $("#question-text").html(NextKoreanChar($("#question-text").text()));
+    $("#numCorrect")
+      .stop(true, true)
+      .html(0)
+      .fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100)
+  });
 
   $(document).on("keydown", function (e) {
     {
+
       // Escape pressed
       if (e.which === 27) {
 
         $("#popup1").attr("class", "overlay");
 
       // Letter key pressed (if not letter key do nothing)
-      } else if (koreanKey.characterCode.indexOf(e.which) >= 0) {
+    } else if (koreanKey.characterCode.indexOf(e.which)+32 >= 0) {
 
         // Calculate key pressed
         var keyVal = e.which + (e.shiftKey ? 0 : 32)

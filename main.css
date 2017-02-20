@@ -1,5 +1,4 @@
 body {
-  background-image: url("background_image.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -7,19 +6,21 @@ body {
   background-color: #464646;
 }
 
-header {
-  /*background-color: rgba(255, 255, 255, 0.2);*/
+#title {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  line-height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  top: 400px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.8);
   font-family: "Open Sans Condensed",Sans-Serif;
   font-weight: bold;
   font-size: 40px;
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  line-height: 80px;
-  vertical-align: middle;
-  text-align: center;
-  top: 0;
-  left: 0;
 }
 
 #header-area-text {
@@ -40,9 +41,10 @@ header {
   left: 0;
   right: 0;
   margin: 0 auto;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(250, 223, 99, 1);
   font-size: 100px;
   font-family: "Open Sans", sans-serif;
+  border: 2px rgba(71, 86, 87, 1) dotted;
 }
 
 #streak-counter {
@@ -129,27 +131,22 @@ header {
 
 /*---End Keyboard Graphic---*/
 
+#sidebar-icons {
+  position: absolute;
+  top: 300px;
+  text-align: center;
+  top: 250px;
+  left: 0px;
+  right: 470px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+#sidebar-icons img {
+  width: 50px;
+}
+
 /*---Study Pop-up---*/
-
-#study {
-  height: 20px;
-  line-height: 20px;
-}
-
-.button {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  color: rgba(198, 197, 185, 1);
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-  display: inline;
-}
-
-.button:hover {
-  color: rgba(250, 223, 99, 1);
-}
 
 #popup1 {
   position: absolute;
@@ -181,7 +178,7 @@ header {
   width: 727px;
   height: 154px;
   top: 0;
-  bottom: 0;
+  bottom: 425px;
   left: 0;
   right: 0;
   position: absolute;
@@ -206,9 +203,8 @@ header {
 /*---End Study Pop-up---*/
 
 footer {
-  /*background: #000000;*/
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "Montserrat",Sans-Serif;
+  color: rgba(240, 96, 96, 1);
+  font-family: "Open Sans",Sans-Serif;
   padding: 10px 10px 10px 10px;
   height: 30px;
   line-height: 20px;
