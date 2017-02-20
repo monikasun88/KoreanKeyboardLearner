@@ -50,7 +50,7 @@ body {
 #streak-counter {
   font-size: 15px;
   line-height: 15px;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Roboto Condensed";
   position: absolute;
   text-align: right;
   top: 3px;
@@ -202,17 +202,33 @@ body {
 
 /*---End Study Pop-up---*/
 
+#instruction {
+  color: rgba(198, 197, 185, 0.7);
+  padding: 2px;
+  text-align: center;
+  position: absolute;
+  top: 500px;
+  width: 400px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+}
+
 footer {
-  color: rgba(240, 96, 96, 1);
-  font-family: "Open Sans",Sans-Serif;
-  padding: 10px 10px 10px 10px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+  font-family: "Open Sans Condensed",Sans-Serif;
+  padding: 10px 0px 10px q0px;
   height: 30px;
   line-height: 20px;
   vertical-align: middle;
   text-align: center;
   position: absolute;
   float: left;
-  width: 100%;
+  /*max-width: 100vw;*/
+  width: 100vw;
   left: 0;
   bottom: 0;
   font-size: 14px;
