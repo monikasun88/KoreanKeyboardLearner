@@ -5,15 +5,13 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-color: #464646;
-  font-family: "Malgun Gothic",Sans-Serif;
-  font-size: 40px;
-  font-weight: bold;
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.2);
-  font-family: "Montserrat",Sans-Serif;
+  /*background-color: rgba(255, 255, 255, 0.2);*/
+  font-family: "Open Sans Condensed",Sans-Serif;
   font-weight: bold;
+  font-size: 40px;
   position: absolute;
   width: 100%;
   height: 80px;
@@ -27,6 +25,8 @@ header {
 #header-area-text {
   color: rgba(255, 255, 255, 0.8);
 }
+
+/*---Question Area---*/
 
 #question-area {
   background-color: rgba(255, 255, 255, 0.2);
@@ -42,90 +42,52 @@ header {
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.8);
   font-size: 100px;
+  font-family: "Open Sans", sans-serif;
 }
 
-#input-area {
-  background-color: rgba(255, 255, 255, 0.2);
+#streak-counter {
+  font-size: 15px;
+  line-height: 15px;
+  font-family: "Open Sans Condensed", sans-serif;
   position: absolute;
-  width: 200px;
-  height: 200px;
-  vertical-align: top;
-  text-align: center;
-  top: 400px;
-  left: 200px;
-  right: 0;
-  margin: 0 auto;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 100px;
+  text-align: right;
+  top: 3px;
+  right: 3px;
 }
 
-#check-area {
-  background-color: rgba(255, 255, 255, 0.2);
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  vertical-align: top;
-  text-align: center;
-  top: 400px;
-  left: -200px;
-  right: 0;
-  margin: 0 auto;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 100px;
-}
+/*---End Question Area---*/
+
+/*---Keyboard Graphic---*/
 
 #keyboard-graphic {
-  background-color: rgba(255, 255, 255, 0.2);
-  position: absolute;
-  width: 650px;
-  vertical-align: top;
-  text-align: center;
-  top: 420px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 20px;
-  border-radius: 5px;
+  width: 711px;
+  height: 138px;
+  padding: 8px;
+  border-radius: 2px;
+  margin: auto;
 }
 
 .keyrow {
-  height: 44px;
+  height: 46px;
   position: relative;
-  padding-left: 3px;
-  padding-right: 3px;
 }
-
-/*#keyboard-graphic-row-one {
-  padding-top: 3px;
-  left: 60px;
-}
-
-#keyboard-graphic-row-two {
-  left: 78px;
-}
-
-#keyboard-graphic-row-three {
-  left: 96px;
-}*/
 
 .keys {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
-  font-family: "Montserrat",Sans-Serif;
+  background-color: rgba(71, 86, 87, 1);
+  /*border-radius: 2px;*/
+  border: 2px rgba(57, 58, 16, 1) solid;
+  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
-  color: rgba(0, 0, 0, 1);
-  border: 1px black solid;
+  font-size: 18px;
+  color: rgba(198, 197, 185, 1);
   float: left;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   text-align: left;
-  padding: 3px;
-  margin: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  margin: 2px;
 }
 
 .keys.text {
@@ -133,88 +95,115 @@ header {
 }
 
 #tab-key {
-  width: 58px;
+  width: 60px;
 }
 
 #caplocks-key, #enter-key {
-  width: 66px;
+  width: 72px;
 }
 
-#lshift-key, #rshift-key {
-  width: 88px;
+#lshift-key {
+  width: 96px;
+  background-color: rgba(250, 223, 99, 1);
+  color: rgba(57, 58, 16, 1);
 }
 
-.keys.off {
-  background-color: rgba(255, 255, 255, 0.5);
-  color: rgba(0, 0, 0, 1);
+#rshift-key {
+  width: 97px;
+  background-color: rgba(250, 223, 99, 1);
+  color: rgba(57, 58, 16, 1);
 }
 
-.keys.on {
-  background-color: rgba(12, 79, 99, 0.7);
-  color: rgba(255, 255, 255, 1);
+.koreanChar {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: right;
+  position: relative;
+  top: -25px
 }
 
-/*#q-key {
-  float: none;
-  left: 1px;
-}*/
-
-/* Dropdown Button */
-/*.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    height: 50px
-}*/
-
-.dropbtn path{
-  fill: #FFFFFF;
+.koreanChar.shiftChar {
+  color: rgba(250, 223, 99, 1);
 }
 
-.dropdown {
-  display: inline-block;
+/*---End Keyboard Graphic---*/
+
+/*---Study Pop-up---*/
+
+#study {
+  height: 20px;
+  line-height: 20px;
+}
+
+.button {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: rgba(198, 197, 185, 1);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  display: inline;
+}
+
+.button:hover {
+  color: rgba(250, 223, 99, 1);
+}
+
+#popup1 {
   position: absolute;
-  right: 20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
-    /*z-index: 1;*/
-    text-align: right;
-    padding: 5px;
-    font-size: 14px;
-    line-height: 14px;
-    /*top: 64px;*/
+.overlay {
+  visibility: hidden;
+  opacity: 0;
 }
 
-/* Links inside the dropdown */
-/*.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}*/
+.overlayShow {
+  visibility: visible;
+  opacity: 1;
+}
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: inline-block;
+.popup {
+  margin: auto;
+  padding: 25px;
+  padding-top: 35px;
+  background: #fff;
+  width: 727px;
+  height: 154px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   position: absolute;
-  right: 0px;
+  /*transition: all 5s ease-in-out;*/
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
 }
+
+.popup .close:hover {
+  color: rgba(250, 223, 99, 1);
+}
+
+/*---End Study Pop-up---*/
 
 footer {
   /*background: #000000;*/
