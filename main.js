@@ -75,6 +75,7 @@ $(document).ready(function() {
     $("#question-text").html(NextKoreanChar($("#question-text").text()));
     $("#numCorrect")
       .stop(true, true)
+      .css("font-size", "14px")
       .html(0)
       .fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100)
   }
@@ -150,6 +151,7 @@ $(document).ready(function() {
 
           $("#numCorrect")
             .stop(true, true)
+            .css("font-size", "14px")
             .html(0)
             .fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100)
 
