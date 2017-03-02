@@ -35,6 +35,7 @@ $(document).ready(function() {
     red: "rgba(240, 96, 96, 1)",
     brown: "rgba(57, 58, 16, 1)",
     blue: "rgba(71, 86, 87, 1)",
+    blue2: "rgba(37, 183, 211, 1)",
     white: "rgba(198, 197, 185, 0.7)",
     green: "rgba(0, 168, 120, 1)",
     black: "#464646"
@@ -72,9 +73,11 @@ $(document).ready(function() {
     var genInstruct = "Type the equivalent character to increase your streak<br>"
     var studyInstruct = "<span style='color:"+colorScheme.red+"'>SPACE</span>" +
       "<span style='color:"+colorScheme.white+"'> to go to the key</span><br>"
+    var dataInstruct = "<span style='color:"+colorScheme.blue2+"'>CTRL</span>" +
+      "<span style='color:"+colorScheme.white+"'> to see what you should work on </span><br>"
     var nextInstruct = "<span style='color:"+colorScheme.yellow+"'>&rarr;</span>" +
       "<span style='color:"+colorScheme.white+"'> to skip to the next character</span><br>"
-    return(genInstruct+studyInstruct+nextInstruct)
+    return(genInstruct+studyInstruct+dataInstruct+nextInstruct)
   })
 
   // Add Korean characters to keyboard keyboard
