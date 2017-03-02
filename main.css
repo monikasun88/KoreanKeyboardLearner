@@ -90,6 +90,7 @@ body {
   padding-right: 3px;
   padding-bottom: 3px;
   margin: 2px;
+  cursor: default;
 }
 
 .keys.text {
@@ -120,22 +121,86 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  text-align: right;
+  text-align: center;
   position: relative;
-  top: -25px
+  top: -25px;
+  border: 0px;
+  margin-top: 3px;
+  height: 17px;
+  width: 17px;
+  left: 18px;
+  cursor: default;
 }
 
 .koreanChar.shiftChar {
+  margin-top: 1px;
+}
+
+#keyboard-graphic div.koreanChar.shiftChar {
   color: rgba(250, 223, 99, 1);
 }
 
 /*---End Keyboard Graphic---*/
 
+/*---Keyboard Data Graphic---*/
+
+#keyboard-graphic-data {
+  width: 711px;
+  height: 138px;
+  padding: 8px;
+  border-radius: 2px;
+  margin: auto;
+}
+
+#keyboard-graphic-data div div.keys {
+  background-color: #464646;
+  color: rgba(198, 197, 185, 1);
+  /*border: 1px black solid;*/
+  margin-top: 1px;
+}
+
+#keyboard-graphic-data div div div.koreanChar {
+  width: 17px;
+}
+
+.keyNotPopped {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-family: "Open Sans Condensed";
+  font-size: 14px;
+  font-weight: 700;
+  width: 40px;
+  background-color: rgba(240, 96, 96, 1);
+  color: #464646;
+  border: 1px dashed #464646;
+  z-index: 1000000000000000000000000;
+  text-align: center;
+}
+
+#reset-button {
+  position: absolute;
+  top: 190px;
+  left: 360px;
+  background-color: rgba(250, 223, 99, 1);
+  color: #464646;
+  border: 2px #464646 solid;
+  height: 20px;
+  width: 51px;
+  font-family: "Open Sans Condensed";
+  font-weight: 700;
+  text-align: center;
+}
+
+/*---End Keyboard Data Graphic---*/
+
 #sidebar-icons {
   position: absolute;
   top: 300px;
   text-align: center;
-  top: 250px;
+  top: 225px;
   left: 0px;
   right: 470px;
   margin: 0 auto;
@@ -148,7 +213,7 @@ body {
 
 /*---Study Pop-up---*/
 
-#popup1 {
+#popup1, #popup2 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -183,6 +248,10 @@ body {
   right: 0;
   position: absolute;
   /*transition: all 5s ease-in-out;*/
+}
+
+#popup2 .popup {
+  height: 170px;
 }
 
 .popup .close {

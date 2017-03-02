@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,700|Open+Sans+Condensed:300,400,700|Roboto+Condensed:400"
     rel="stylesheet">
   <script src="jquery-3.1.1.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="jquery-ui.js"></script>
 </head>
 <body>
@@ -21,6 +22,7 @@
   </div>
   <div id="sidebar-icons">
     <a class="button" href="#popup1"><img src="study_icon.svg"></img></a>
+    <img src="data.svg" id="data-button"></img>
     <img src="next.svg" id="next-button"></img>
   </div>
   <div id="title">
@@ -28,7 +30,7 @@
       LEARN THE KOREAN KEYBOARD
     </span>
   </div>
-  <div id="instruction">hi
+  <div id="instruction">
   </div>
   <div id="popup1" class="overlay">
       <div class="popup">
@@ -84,6 +86,61 @@
           </div>
         </div>
       </div>
+      <div id="popup2" class="overlay">
+          <div class="popup">
+              <a class="close" href="#">&times;</a>
+              <div class="content">
+                <div id="keyboard-graphic-data">
+                  <div id="keyboard-graphic-row-one" class="keyrow">
+                    <div id="tab-key" class="keys text">TAB</div>
+                    <div id="q-key" class="keys">Q</div>
+                    <div id="w-key" class="keys">W</div>
+                    <div id="e-key" class="keys">E</div>
+                    <div id="r-key" class="keys">R</div>
+                    <div id="t-key" class="keys">T</div>
+                    <div id="y-key" class="keys">Y</div>
+                    <div id="u-key" class="keys">U</div>
+                    <div id="i-key" class="keys">I</div>
+                    <div id="o-key" class="keys">O</div>
+                    <div id="p-key" class="keys">P</div>
+                    <div id="lbracket-key" class="keys">[</div>
+                    <div id="rbracket-key" class="keys">]</div>
+                    <div id="fslash-key" class="keys">\</div>
+                  </div>
+                  <div id="keyboard-graphic-row-two" class="keyrow">
+                    <div id="caplocks-key" class="keys text">CAPSLOCK</div>
+                    <div id="a-key" class="keys">A</div>
+                    <div id="s-key" class="keys">S</div>
+                    <div id="d-key" class="keys">D</div>
+                    <div id="f-key" class="keys">F</div>
+                    <div id="g-key" class="keys">G</div>
+                    <div id="h-key" class="keys">H</div>
+                    <div id="j-key" class="keys">J</div>
+                    <div id="k-key" class="keys">K</div>
+                    <div id="l-key" class="keys">L</div>
+                    <div id="semicolon-key" class="keys">;</div>
+                    <div id="apos-key" class="keys">'</div>
+                    <div id="enter-key" class="keys text">ENTER</div>
+                  </div>
+                  <div id="keyboard-graphic-row-three" class="keyrow">
+                    <div id="lshift-key" class="keys text">SHIFT</div>
+                    <div id="z-key" class="keys">Z</div>
+                    <div id="x-key" class="keys">X</div>
+                    <div id="c-key" class="keys">C</div>
+                    <div id="v-key" class="keys">V</div>
+                    <div id="b-key" class="keys">B</div>
+                    <div id="n-key" class="keys">N</div>
+                    <div id="m-key" class="keys">M</div>
+                    <div id="comma-key" class="keys">,</div>
+                    <div id="period-key" class="keys">.</div>
+                    <div id="backslash-key" class="keys">/</div>
+                    <div id="rshift-key" class="keys text">SHIFT</div>
+                  </div>
+                </div>
+              </div>
+              <div id="reset-button">RESET</a>
+            </div>
+          </div>
   <footer>Created by: Jiayi Sun @2017</footer>
   <script src="main.js"></script>
 </body>
